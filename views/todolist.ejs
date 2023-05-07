@@ -1,0 +1,17 @@
+<%- include("header") -%>
+<a href="/">Home</a>
+<h1>To Do List - <%= userName %></h1>
+<form class="item" action="/todolist/<%= userName %>" method="post">
+    <input type="text" name="item">
+    <button type="submit" name="add" value="<%= userName %>">Add</button>
+  </form>
+<% function AutoRefresh() { %>
+   <%  setTimeout("location.reload(true);",1000); %>
+ <% } %>
+<% newItems.forEach(function(item){ %>
+    <form id="box" action="/delete/<%= userName %>" method="post">
+        <p><%= item %><span> <button name="deleteButton" value="<%= item %>">Delete</button> </span></p>
+      </form>
+    <% }) %>
+<%- include("footer") -%>
+<!-- item._id -->
