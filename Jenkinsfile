@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'Building the application...'
                 // Example build command, replace with your actual build step
-                sh 'echo Simulating build...'
+                bat 'echo Simulating build...'
             }
         }
 
@@ -21,7 +21,7 @@ pipeline {
             steps {
                 echo 'Deploying the application...'
                 // Example deploy command, replace with your real deployment logic
-                sh 'echo Simulating deployment...'
+                bat 'echo Simulating deployment...'
             }
         }
     }
